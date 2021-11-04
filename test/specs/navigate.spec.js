@@ -22,7 +22,7 @@ describe("Loading WebdriverIO webpage", () => {
     configuration.setApiKey(process.env.APPLITOOLS_API_KEY)
     configuration.setServerUrl(applitools.APPLITOOLS_SERVER)
     configuration.setBatch(new BatchInfo(applitools.BATCH_INFO))
-    configuration.addBrowser(1280, 768, BrowserType.CHROME)
+    configuration.addBrowser(800, 600, BrowserType.CHROME)
   })
 
   beforeEach("setting up test information", async function () {

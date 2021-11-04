@@ -1,9 +1,10 @@
+const properties = require(`../properties/${process.env.NODE_ENV}.properties`)
 const assert = require("assert")
 
 describe("Loading WebdriverIO webpage", () => {
   it("validates website title", async () => {
-    await browser.url("https://webdriver.io/")
+    await browser.url(properties.url)
     const title = await browser.getTitle()
-    assert.strictEqual(title, "WebdriverIO · Next-gen browser and mobile automation test framework for Node.js | WebdriverIO")
+    assert.strictEqual(title, properties.title)
   })
 })

@@ -1,6 +1,6 @@
 const assert = require("assert")
 
-describe("Loading Dominos webpage", () => {
+describe("Loading WebdriverIO webpage", () => {
   it("validates website title", async () => {
     await browser.url("https://webdriver.io/")
     const title = await browser.getTitle()

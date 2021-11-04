@@ -22,6 +22,16 @@ npm install
 npx prettier --write .
 ```
 
+#### Setting up environment
+
+```bash
+export APPLITOOLS_API_KEY=${apiKey}
+```
+
+where:
+
+- `${apiKey}` Is your Applitools api key
+
 #### To run the project locally
 
 ```bash

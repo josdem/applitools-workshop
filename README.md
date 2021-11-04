@@ -35,7 +35,7 @@ where:
 #### To run the project locally
 
 ```bash
-npx wdio run test/config/wdio.conf.js
+npx wdio run wdio.conf.js
 ```
 
 #### To run a single test

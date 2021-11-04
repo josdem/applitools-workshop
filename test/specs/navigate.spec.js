@@ -39,4 +39,13 @@ describe("Loading WebdriverIO webpage", () => {
     const title = await browser.getTitle()
     assert.strictEqual(title, properties.title)
   })
+
+  afterEach("cleaning up test", async () => {
+    await eyes.abortAsync()
+  })
+
+  after("publishing results", async () => {
+    const results = await runner.getAllTestResults(false)
+    console.log(results)
+  })
 })

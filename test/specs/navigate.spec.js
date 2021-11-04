@@ -24,6 +24,16 @@ describe("Loading WebdriverIO webpage", () => {
     configuration.addBrowser(1280, 768, BrowserType.CHROME)
   })
 
+  beforeEach("setting up test information", async function () {
+    const appName = await this.test.parent.title
+    const testName = await this.currentTest.title
+
+    configuration.setAppName(appName)
+    configuration.setTestName(testName)
+    eyes.setConfiguration(configuration)
+    await eyes.open(browser)
+  })
+
   it("validates website title", async () => {
     await browser.url(properties.url)
     const title = await browser.getTitle()

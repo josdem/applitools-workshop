@@ -2,7 +2,7 @@
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-This is a workshop to show features around [Applitools](https://applitools.com/)
+This is a workshop to show features around [Applitools](https://applitools.com/) with [Webdriver.io](https://webdriver.io/)
 
 #### Requirements
 

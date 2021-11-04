@@ -1,11 +1,8 @@
 {
   "name": "applitools-workshop",
   "version": "1.0.0",
-  "description": "Applitools demo",
+  "description": "Applitools demo using WebdriverIO",
   "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/josdem/applitools-workshop.git"

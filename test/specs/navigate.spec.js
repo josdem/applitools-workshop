@@ -2,7 +2,7 @@ const properties = require(`../properties/${process.env.NODE_ENV}.properties`)
 const applitools = require("../utils/applitools.util")
 const assert = require("assert")
 
-const { VisualGridRunner, RunnerOptions, Eyes, Target, Configuration, BatchInfo, BrowserType, DeviceName, ScreenOrientation, By } = require("@applitools/eyes-webdriverio")
+const { VisualGridRunner, RunnerOptions, Eyes, BatchInfo, BrowserType, ConsoleLogHandler } = require("@applitools/eyes-webdriverio")
 
 let eyes
 let runner
@@ -13,10 +13,7 @@ describe("Loading WebdriverIO webpage", () => {
     const runnerOptions = new RunnerOptions().testConcurrency(5)
     runner = new VisualGridRunner(runnerOptions)
     eyes = new Eyes(runner)
-
-    if (browser.config.enableEyesLogs) {
-      eyes.setLogHandler(new ConsoleLogHandler(true))
-    }
+    eyes.setLogHandler(new ConsoleLogHandler(true))
 
     configuration = eyes.getConfiguration()
     configuration.setApiKey(process.env.APPLITOOLS_API_KEY)

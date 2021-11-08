@@ -19,7 +19,12 @@ describe("Loading WebdriverIO webpage", () => {
     configuration.setApiKey(process.env.APPLITOOLS_API_KEY)
     configuration.setServerUrl(applitools.APPLITOOLS_SERVER)
     configuration.setBatch(new BatchInfo(applitools.BATCH_INFO))
-    configuration.addBrowser(800, 600, BrowserType.CHROME)
+    configuration.addBrowser(applitools.CHROME.width, applitools.CHROME.height, BrowserType.CHROME)
+    configuration.addBrowser(applitools.FIREFOX.width, applitools.FIREFOX.height, BrowserType.FIREFOX)
+    configuration.addBrowser(applitools.EDGE.width, applitools.EDGE.height, BrowserType.EDGE_CHROMIUM)
+    configuration.addBrowser(applitools.SAFARI.width, applitools.SAFARI.height, BrowserType.SAFARI)
+    configuration.addDeviceEmulation(DeviceName.iPhone_11, ScreenOrientation.PORTRAIT)
+    configuration.addDeviceEmulation(DeviceName.Pixel_5, ScreenOrientation.PORTRAIT)
   })
 
   beforeEach("setting up test information", async function () {

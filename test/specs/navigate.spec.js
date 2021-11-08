@@ -2,7 +2,7 @@ const properties = require(`../properties/${process.env.NODE_ENV}.properties`)
 const applitools = require("../utils/applitools.util")
 const assert = require("assert")
 
-const { VisualGridRunner, RunnerOptions, Eyes, BatchInfo, BrowserType, ConsoleLogHandler } = require("@applitools/eyes-webdriverio")
+const { VisualGridRunner, RunnerOptions, Eyes, Target, BatchInfo, BrowserType, ConsoleLogHandler } = require("@applitools/eyes-webdriverio")
 
 let eyes
 let runner

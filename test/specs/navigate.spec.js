@@ -46,11 +46,11 @@ describe("Loading WebdriverIO webpage", () => {
 
   afterEach("cleaning up test", async () => {
     await eyes.close()
-    await eyes.abortAsync()
   })
 
   after("publishing results", async () => {
     const results = await runner.getAllTestResults(false)
     console.log(results)
+    await eyes.abortAsync()
   })
 })

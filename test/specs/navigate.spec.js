@@ -34,11 +34,13 @@ describe("Loading WebdriverIO webpage", () => {
 
   it("validates website title", async () => {
     await browser.url(properties.url)
+    await eyes.check("home page", Target.window().layoutBreakpoints(applitools.BREAK_POINT_SIZE))
     const title = await browser.getTitle()
     assert.strictEqual(title, properties.title)
   })
 
   afterEach("cleaning up test", async () => {
+    await eyes.close()
     await eyes.abortAsync()
   })
 

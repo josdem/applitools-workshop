@@ -41,16 +41,16 @@ describe("Loading WebdriverIO webpage", () => {
     await browser.url(properties.url)
     await eyes.check("home page", Target.window().layoutBreakpoints(applitools.BREAK_POINT_SIZE))
     const title = await browser.getTitle()
+    await eyes.closeAsync()
     assert.strictEqual(title, properties.title)
   })
 
   afterEach("cleaning up test", async () => {
-    await eyes.close()
+    await eyes.abortAsync()
   })
 
   after("publishing results", async () => {
     const results = await runner.getAllTestResults(false)
     console.log(results)
-    await eyes.abortAsync()
   })
 })

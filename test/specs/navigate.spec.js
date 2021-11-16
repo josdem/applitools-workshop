@@ -2,6 +2,8 @@ const properties = require(`../properties/${process.env.NODE_ENV}.properties`)
 const applitools = require("../utils/applitools.util")
 const assert = require("assert")
 
+import { HomePage } from "../pageobjects/home.page"
+
 describe("Loading WebdriverIO webpage", () => {
   before("setting up Applitools configuration", async () => {
     await applitools.setUpConfiguration()
@@ -14,9 +16,8 @@ describe("Loading WebdriverIO webpage", () => {
   })
 
   it("validates website title", async () => {
-    await browser.url(properties.url)
+    const title = await HomePage.open()
     await applitools.checkWindowEyes("home page")
-    const title = await browser.getTitle()
     assert.strictEqual(title, properties.title)
     await applitools.closeEyes()
   })

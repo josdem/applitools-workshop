@@ -1,7 +1,7 @@
 const properties = require(`../properties/${process.env.NODE_ENV}.properties`)
-const applitools = require("../utils/applitools.util")
 
 import * as assert from "assert"
+import * as applitools from "../utils/applitools.util"
 import { HomePage } from "../pageobjects/home.page"
 
 describe("Loading WebdriverIO webpage", () => {

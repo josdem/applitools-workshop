@@ -22,10 +22,16 @@ npm install
 npx prettier --write .
 ```
 
-#### Setting up environment
+#### Setting up environment on Linux/Mac
 
 ```bash
 export APPLITOOLS_API_KEY=${apiKey}
+```
+
+#### Setting up environment on Windows
+
+```bash
+ Set-Item -Path Env:APPLITOOLS_API_KEY -Value ${apiKey}
 ```
 
 where:

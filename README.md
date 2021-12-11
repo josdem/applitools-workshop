@@ -47,7 +47,7 @@ npx wdio run wdio.conf.js
 #### To run a single test
 
 ```bash
-npx wdio run test/config/wdio.conf.js --spec=test/specs/${test}.spec.js
+npx wdio run wdio.conf.js --spec=test/specs/${test}.spec.js
 ```
 
 where:

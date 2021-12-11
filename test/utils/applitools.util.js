@@ -52,6 +52,10 @@ const checkWindowEyes = async (screenshot) => {
   await eyes.check(screenshot, Target.window().layoutBreakpoints(BREAK_POINT_SIZE))
 }
 
+const checkRegionEyes = async (screenshot, region) => {
+  await eyes.check(screenshot, Target.window().strictRegion(region))
+}
+
 const closeEyes = async () => {
   await eyes.closeAsync()
 }
@@ -66,10 +70,11 @@ const publishing = async () => {
 }
 
 module.exports = {
-  setUpConfiguration,
-  setUpTest,
-  checkWindowEyes,
-  closeEyes,
   cleaning,
+  setUpTest,
+  closeEyes,
   publishing,
+  checkWindowEyes,
+  checkRegionEyes,
+  setUpConfiguration,
 }

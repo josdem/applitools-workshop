@@ -14,4 +14,3 @@ class Home {
 }
 
 export const HomePage = new Home()
-export const footter = getFooter()

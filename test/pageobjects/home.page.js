@@ -4,7 +4,7 @@ const properties = require(`../properties/${process.env.NODE_ENV}.properties`)
 
 class Home {
   getFooter() {
-    return $('[class="footer footer--dark"]')
+    return $(".footer--dark")
   }
 
   async open() {

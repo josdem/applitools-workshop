@@ -17,7 +17,7 @@ describe("Checkout footer region", () => {
 
   it("validates website title", async () => {
     const title = await HomePage.open()
-    await applitools.checkRegionEyes("home footer", HomePage.getFooter())
+    await applitools.checkRegionEyes("footer region", HomePage.getFooter())
     assert.strictEqual(title, properties.title)
     await applitools.closeEyes()
   })

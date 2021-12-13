@@ -53,7 +53,8 @@ const checkWindowEyes = async (screenshot) => {
 }
 
 const checkRegionEyes = async (screenshot, region) => {
-  await eyes.check(screenshot, Target.window().strictRegion(region))
+  await region.scrollIntoView()
+  await eyes.check(screenshot, Target.window().layout())
 }
 
 const closeEyes = async () => {

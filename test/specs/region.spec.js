@@ -15,7 +15,7 @@ describe("Checkout footer region", () => {
     await applitools.setUpTest(appName, testName)
   })
 
-  it("validates website title", async () => {
+  it("validates website footer", async () => {
     const title = await HomePage.open()
     await applitools.checkRegionEyes("footer region", HomePage.getFooter())
     assert.strictEqual(title, properties.title)

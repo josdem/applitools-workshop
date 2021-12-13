@@ -1,4 +1,4 @@
-const { VisualGridRunner, RunnerOptions, Eyes, Target, BatchInfo, BrowserType, DeviceName, ScreenOrientation } = require("@applitools/eyes-webdriverio")
+const { VisualGridRunner, RunnerOptions, Eyes, Target, BatchInfo, BrowserType, DeviceName, ScreenOrientation, By } = require("@applitools/eyes-webdriverio")
 
 const APPLITOOLS_SERVER = "https://eyes.applitools.com/"
 const BATCH_INFO = "Ultrafast Batch"
@@ -53,8 +53,7 @@ const checkWindowEyes = async (screenshot) => {
 }
 
 const checkRegionEyes = async (screenshot, region) => {
-  await region.scrollIntoView()
-  await eyes.check(screenshot, Target.window().layout())
+  await eyes.check(screenshot, Target.region(By.css(region)))
 }
 
 const closeEyes = async () => {

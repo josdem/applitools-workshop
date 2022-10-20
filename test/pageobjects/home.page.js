@@ -1,8 +1,6 @@
-import { BrowserType } from "@applitools/eyes-webdriverio"
-
 const properties = require(`../properties/${process.env.NODE_ENV}.properties`)
 
-class Home {
+class HomePage {
   getFooter() {
     return ".footer--dark"
   }
@@ -13,4 +11,4 @@ class Home {
   }
 }
 
-export const HomePage = new Home()
+module.exports = new HomePage()

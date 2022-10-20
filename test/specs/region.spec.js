@@ -1,8 +1,8 @@
 const properties = require(`../properties/${process.env.NODE_ENV}.properties`)
 
-import * as assert from "assert"
-import * as applitools from "../utils/applitools.util"
-import { HomePage } from "../pageobjects/home.page"
+const assert = require("assert")
+const applitools = require("../utils/applitools.util")
+const HomePage  = require("../pageobjects/home.page")
 
 describe("Checkout footer region", () => {
   before("setting up Applitools configuration", async () => {

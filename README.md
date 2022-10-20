@@ -6,7 +6,7 @@ This is a workshop to show features around [Applitools](https://applitools.com/)
 
 #### Requirements
 
-- [NodeJS](https://nodejs.org/en/) version: `v16.13.0`
+- [NodeJS](https://nodejs.org/en/) version: `v16.15.0`
 
 **Note:** I recommed to use [NVM](https://github.com/nvm-sh/nvm) to manage NodeJS versions
 

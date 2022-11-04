@@ -62,9 +62,6 @@ const closeEyes = async () => {
 
 const cleaning = async () => {
   await eyes.abortAsync()
-}
-
-const publishing = async () => {
   const results = await runner.getAllTestResults(false)
   console.log(results)
 }
@@ -73,7 +70,6 @@ module.exports = {
   cleaning,
   setUpTest,
   closeEyes,
-  publishing,
   checkWindowEyes,
   checkRegionEyes,
   setUpConfiguration,

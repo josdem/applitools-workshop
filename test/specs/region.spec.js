@@ -2,7 +2,7 @@ const properties = require(`../properties/${process.env.NODE_ENV}.properties`)
 
 const assert = require("assert")
 const applitools = require("../utils/applitools.util")
-const HomePage  = require("../pageobjects/home.page")
+const HomePage = require("../pageobjects/home.page")
 
 describe("Checkout footer region", () => {
   before("setting up Applitools configuration", async () => {
@@ -22,11 +22,11 @@ describe("Checkout footer region", () => {
     await applitools.closeEyes()
   })
 
-  afterEach("cleaning up test", async () => {
-    await applitools.cleaning()
+  afterEach("closing eyes", async () => {
+    await applitools.closeEyes()
   })
 
-  after("publishing results", async () => {
-    await applitools.publishing()
+  after("Cleaning and publishing results", async () => {
+    await applitools.cleaning()
   })
 })

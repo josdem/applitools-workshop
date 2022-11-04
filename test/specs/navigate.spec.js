@@ -15,7 +15,7 @@ describe(testName, () => {
   })
 
   it("validates website title", async () => {
-    const title = await HomePage.open()
+    await HomePage.open()
     await applitools.checkWindowEyes("home page")
   })
 

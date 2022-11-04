@@ -1,7 +1,6 @@
 const { VisualGridRunner, RunnerOptions, Eyes, Target, BatchInfo, BrowserType, DeviceName, ScreenOrientation, By } = require("@applitools/eyes-webdriverio")
 
 const APPLITOOLS_SERVER = "https://eyes.applitools.com/"
-const BATCH_INFO = "Ultrafast Batch"
 const BREAK_POINT_SIZE = 700
 const CHROME = {
   width: 800,
@@ -24,7 +23,7 @@ let eyes
 let runner
 let configuration
 
-const setUpConfiguration = async () => {
+const setUpConfiguration = async (batchName) => {
   const runnerOptions = new RunnerOptions().testConcurrency(5)
   runner = new VisualGridRunner(runnerOptions)
   eyes = new Eyes(runner)
@@ -32,7 +31,7 @@ const setUpConfiguration = async () => {
   configuration = eyes.getConfiguration()
   configuration.setApiKey(process.env.APPLITOOLS_API_KEY)
   configuration.setServerUrl(APPLITOOLS_SERVER)
-  configuration.setBatch(new BatchInfo(BATCH_INFO))
+  configuration.setBatch(new BatchInfo(batchName))
   configuration.addBrowser(CHROME.width, CHROME.height, BrowserType.CHROME)
   configuration.addBrowser(FIREFOX.width, FIREFOX.height, BrowserType.FIREFOX)
   configuration.addBrowser(EDGE.width, EDGE.height, BrowserType.EDGE_CHROMIUM)

@@ -3,8 +3,8 @@ const { VisualGridRunner, RunnerOptions, Eyes, Target, BatchInfo, BrowserType, D
 const APPLITOOLS_SERVER = "https://eyes.applitools.com/"
 const BREAK_POINT_SIZE = 700
 const CHROME = {
-  width: 800,
-  height: 600,
+  width: 1280,
+  height: 768,
 }
 const FIREFOX = {
   width: 800,

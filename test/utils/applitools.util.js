@@ -1,6 +1,6 @@
 const { VisualGridRunner, RunnerOptions, Eyes, Target, BatchInfo, BrowserType, DeviceName, ScreenOrientation, By } = require("@applitools/eyes-webdriverio")
 
-const APPLITOOLS_SERVER = "https://eyes.applitools.com/"
+const APPLITOOLS_SERVER = "https://dominoseyes.applitools.com/"
 const BREAK_POINT_SIZE = 700
 const CHROME = {
   width: 1280,

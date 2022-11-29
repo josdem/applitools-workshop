@@ -1,6 +1,5 @@
 const { VisualGridRunner, RunnerOptions, Eyes, Target, BatchInfo, BrowserType, DeviceName, ScreenOrientation, By } = require("@applitools/eyes-webdriverio")
 
-const APPLITOOLS_SERVER = "https://dominoseyes.applitools.com/"
 const BREAK_POINT_SIZE = 700
 const CHROME = {
   width: 1280,
@@ -29,8 +28,6 @@ const setUpConfiguration = async (batchName) => {
   eyes = new Eyes(runner)
 
   configuration = eyes.getConfiguration()
-  configuration.setApiKey(process.env.APPLITOOLS_API_KEY)
-  configuration.setServerUrl(APPLITOOLS_SERVER)
   configuration.setBatch(new BatchInfo(batchName))
   configuration.addBrowser(CHROME.width, CHROME.height, BrowserType.CHROME)
   configuration.addBrowser(FIREFOX.width, FIREFOX.height, BrowserType.FIREFOX)

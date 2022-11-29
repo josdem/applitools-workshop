@@ -115,7 +115,7 @@ exports.config = {
   // commands. Instead, they hook themselves up into the test process.
   services: [],
   hostname: 'localhost',
-  port: 51357,
+  port: 57549,
   path: '/',
   protocol: 'http',
 

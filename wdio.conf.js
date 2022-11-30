@@ -55,11 +55,7 @@ exports.config = {
       maxInstances: 5,
       //
       browserName: "chrome",
-      acceptInsecureCerts: true,
-      applitools : {
-        apiKey: "API_KEY",
-        serverUrl: "https://dominoseyes.applitools.com/"
-      }
+      acceptInsecureCerts: true
       // If outputDir is provided WebdriverIO can capture driver session logs
       // it is possible to configure which logTypes to include/exclude.
       // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -115,7 +111,7 @@ exports.config = {
   // commands. Instead, they hook themselves up into the test process.
   services: [],
   hostname: 'localhost',
-  port: 57549,
+  port: 59396,
   path: '/',
   protocol: 'http',
 
